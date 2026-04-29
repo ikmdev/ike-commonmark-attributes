@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd">
+    <modelVersion>4.1.0</modelVersion>
+
+    <parent>
+        <groupId>network.ike.platform</groupId>
+        <artifactId>ike-parent</artifactId>
+        <version>14</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>network.ike.platform</groupId>
+    <artifactId>ike-commonmark-attributes</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>IKE commonmark-java attributes extension</name>
+    <description>
+        Pandoc-style {.class #id key=value} attribute syntax for commonmark-java,
+        aligned with AsciiDoc's [.role#id%opt] semantics. Lets the same role
+        vocabulary (.warning, .normative, .deprecated, .example, ...) and the
+        same stylesheet drive Markdown and AsciiDoc renderers in IKE.
+    </description>
+
+    <distributionManagement>
+        <repository>
+            <id>ike-releases</id>
+            <url>${deploy.release.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>ike-snapshots</id>
+            <url>${deploy.snapshot.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>dev.ikm.komet</groupId>
+                <artifactId>komet-bom</artifactId>
+                <version>3.0.7-reasoner-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
