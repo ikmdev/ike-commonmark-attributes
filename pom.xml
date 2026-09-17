@@ -23,6 +23,13 @@
         same stylesheet drive Markdown and AsciiDoc renderers in IKE.
     </description>
 
+    <scm>
+        <connection>scm:git:https://github.com/ikmdev/ike-commonmark-attributes.git</connection>
+        <developerConnection>scm:git:git@github.com:ikmdev/ike-commonmark-attributes.git</developerConnection>
+        <url>https://github.com/ikmdev/ike-commonmark-attributes</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <distributionManagement>
         <repository>
             <id>ike-releases</id>
