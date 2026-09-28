@@ -6,7 +6,7 @@
     <parent>
         <groupId>network.ike.platform</groupId>
         <artifactId>ike-parent</artifactId>
-        <version>178</version>
+        <version>186</version>
         <relativePath/>
     </parent>
 
@@ -40,6 +40,10 @@
             <url>${deploy.snapshot.url}</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <properties>
+        <java.version>27</java.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
